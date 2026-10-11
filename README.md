@@ -82,11 +82,6 @@ and 15% for held-out testing, using `random_state=42`.
 
 The reported final metrics are calculated on the held-out test set.
 
-> Before redistributing raw dataset files in a public repository, check
-> the dataset's current licence and terms. The app needs its saved
-> models and other required artifacts, but raw training data should only
-> be published when necessary and permitted.
-
 ## Machine Learning Workflow
 
 1.  **Data inspection and exploratory data analysis:** Inspect feature
@@ -135,26 +130,16 @@ meta-model, probability-column configuration, and selected thresholds.
 
 ## Final Test-Set Results
 
-The following saved results are from the held-out test set. Values are
-rounded for readability.
+The following results were obtained on the held-out test set. Values are rounded for readability.
 
-  --------------------------------------------------------------------------------------------------------
-  Model            Threshold   Accuracy   Precision   Recall     F1-score   Balanced      ROC-AUC   PR-AUC
-                                                                            accuracy              
-  -------------- ----------- ---------- ----------- -------- ------------ ---------- ------------ --------
-  **Stacking**        0.3017     0.7971      0.5714   0.7476   **0.6477**     0.7806       0.8109   0.5464
-
-  Random Forest         0.56     0.7954      0.5687   0.7448       0.6449     0.7785       0.8094   0.5443
-
-  Soft Voting         0.3886     0.7947      0.5678   0.7420       0.6433     0.7771   **0.8120**   0.5435
-
-  Logistic              0.30     0.7888      0.5579   0.7392       0.6359     0.7722       0.8060   0.5450
-  Regression                                                                                      
-
-  Decision Tree         0.31     0.7867      0.5545   0.7378       0.6332     0.7704       0.8030   0.5343
-
-  KNN                   0.34     0.7773      0.5390   0.7420       0.6244     0.7655       0.7986   0.5117
-  --------------------------------------------------------------------------------------------------------
+| Model | Threshold | Accuracy | Precision | Recall | F1-score | Balanced Accuracy | ROC-AUC | PR-AUC |
+|:--|--:|--:|--:|--:|--:|--:|--:|--:|
+| **Stacking** | 0.3017 | 0.7971 | 0.5714 | 0.7476 | **0.6477** | **0.7806** | 0.8109 | 0.5464 |
+| Random Forest | 0.56 | 0.7954 | 0.5687 | 0.7448 | 0.6449 | 0.7785 | 0.8094 | 0.5443 |
+| Soft Voting | 0.3886 | 0.7947 | 0.5678 | 0.7420 | 0.6433 | 0.7771 | **0.8120** | 0.5435 |
+| Logistic Regression | 0.30 | 0.7888 | 0.5579 | 0.7392 | 0.6359 | 0.7722 | 0.8060 | 0.5450 |
+| Decision Tree | 0.31 | 0.7867 | 0.5545 | 0.7378 | 0.6332 | 0.7704 | 0.8030 | 0.5343 |
+| KNN | 0.34 | 0.7773 | 0.5390 | 0.7420 | 0.6244 | 0.7655 | 0.7986 | 0.5117 |
 
 ### Results summary
 
