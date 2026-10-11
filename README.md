@@ -65,11 +65,11 @@ The target indicates whether a candidate belongs to the
 job-change-seeking class. In the cleaned dataset, the target
 distribution is:
 
-  Target class           Rows Meaning
-  -------------- ------------ -------------------------------------
-  `0`                  14,381 Not in the job-change-seeking class
-  `1`                   4,777 In the job-change-seeking class
-  **Total**        **19,158** 
+| Target Class | Rows | Meaning |
+|:--|--:|:--|
+| `0` | 14,381 | Not in the job-change-seeking class |
+| `1` | 4,777 | In the job-change-seeking class |
+| **Total** | **19,158** | **Total number of records** |
 
 The identifier `enrollee_id` is excluded from model features. The
 cleaned dataset contains 15 columns: 14 input features and the target.
@@ -370,6 +370,6 @@ prove the candidate will accept an offer or leave a job.
 
 ## Project Links
 
--   **Live demo:** [YOUR_STREAMLIT_APP_URL](https://hr-job-change-ml.streamlit.app)
+-   **Live demo:** [https://hr-job-change-ml.streamlit.app](https://hr-job-change-ml.streamlit.app)
 -   **GitHub repository:**
-    [YOUR_GITHUB_REPOSITORY_URL](https://github.com/Ujwal-Nandanwar/hr-job-change-ml)
+    [https://github.com/Ujwal-Nandanwar/hr-job-change-ml](https://github.com/Ujwal-Nandanwar/hr-job-change-ml)
