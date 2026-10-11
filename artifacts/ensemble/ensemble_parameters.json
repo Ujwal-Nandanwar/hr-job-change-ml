@@ -1,0 +1,34 @@
+{
+    "ensemble_models": [
+        "Soft Voting",
+        "Stacking"
+    ],
+    "base_models": [
+        "Logistic Regression",
+        "KNN",
+        "Decision Tree",
+        "Random Forest"
+    ],
+    "probability_columns": [
+        "lr_probability",
+        "knn_probability",
+        "dt_probability",
+        "rf_probability"
+    ],
+    "stacking_meta_model": "LogisticRegression",
+    "stacking_meta_parameters": {
+        "max_iter": 2000,
+        "random_state": 42
+    },
+    "cross_validation": {
+        "method": "StratifiedKFold",
+        "n_splits": 5,
+        "shuffle": true,
+        "random_state": 42
+    },
+    "threshold_selection_metric": "F1",
+    "thresholds": {
+        "Soft Voting": 0.38856956999571757,
+        "Stacking": 0.30172007603375944
+    }
+}

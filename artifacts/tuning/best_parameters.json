@@ -1,0 +1,24 @@
+{
+    "Logistic Regression": {
+        "model__C": "0.1",
+        "model__class_weight": "None"
+    },
+    "KNN": {
+        "model__n_neighbors": "21",
+        "model__p": "1",
+        "model__weights": "uniform"
+    },
+    "Decision Tree": {
+        "model__class_weight": "None",
+        "model__max_depth": "7",
+        "model__min_samples_leaf": "5",
+        "model__min_samples_split": "20"
+    },
+    "Random Forest": {
+        "model__class_weight": "balanced",
+        "model__max_depth": "None",
+        "model__min_samples_leaf": "5",
+        "model__min_samples_split": "2",
+        "model__n_estimators": "200"
+    }
+}

@@ -1,0 +1,40 @@
+{
+    "id_column": "enrollee_id",
+    "target_column": "target",
+    "numeric_features": [
+        "city_development_index",
+        "training_hours",
+        "experience_missing",
+        "experience_numeric",
+        "last_new_job_missing",
+        "last_new_job_numeric"
+    ],
+    "categorical_features": [
+        "city",
+        "gender",
+        "relevent_experience",
+        "enrolled_university",
+        "education_level",
+        "major_discipline",
+        "company_size",
+        "company_type"
+    ],
+    "all_model_features": [
+        "city",
+        "city_development_index",
+        "gender",
+        "relevent_experience",
+        "enrolled_university",
+        "education_level",
+        "major_discipline",
+        "company_size",
+        "company_type",
+        "training_hours",
+        "experience_missing",
+        "experience_numeric",
+        "last_new_job_missing",
+        "last_new_job_numeric"
+    ],
+    "number_of_model_features": 14,
+    "processed_feature_count": 145
+}

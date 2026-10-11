@@ -1,0 +1,2 @@
+experiment,best_cv_accuracy,best_parameters
+Logistic Regression Accuracy Optimization,0.7801522179784384,"{'model__C': 1, 'model__class_weight': None, 'model__penalty': 'l1', 'model__solver': 'liblinear'}"

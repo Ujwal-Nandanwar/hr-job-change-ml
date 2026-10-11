@@ -1,0 +1,936 @@
+/* =========================================================
+   GLOBAL THEME
+   ========================================================= */
+
+:root {
+    --bg-primary: #f6f8fc;
+    --bg-secondary: #ffffff;
+    --bg-tertiary: #f0f2f7;
+
+    --text-primary: #151821;
+    --text-secondary: #667085;
+    --text-muted: #98a2b3;
+
+    --border: #e4e7ec;
+
+    --accent: #5b5bd6;
+    --accent-light: #eeeeff;
+
+    --success: #159570;
+    --danger: #d6455d;
+
+    --shadow-small:
+        0 2px 8px rgba(16, 24, 40, 0.06);
+
+    --shadow-medium:
+        0 10px 30px rgba(16, 24, 40, 0.08);
+
+    --radius-small: 10px;
+    --radius-medium: 16px;
+    --radius-large: 20px;
+}
+
+
+/* =========================================================
+   STREAMLIT APPLICATION
+   ========================================================= */
+
+.stApp {
+    background: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+
+/* Main content area */
+
+.main {
+    background: var(--bg-primary) !important;
+}
+
+
+/* Streamlit block container */
+
+.block-container {
+    max-width: 1400px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+/* =========================================================
+   CUSTOM CARDS
+   ========================================================= */
+
+.stage-card,
+.preview-card,
+.stat-card,
+.model-card,
+.metric-card,
+.insight-card,
+.tuning-card {
+    background-color: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow-small);
+}
+
+
+/* Card headings */
+
+.stage-card h1,
+.stage-card h2,
+.stage-card h3,
+.preview-card h1,
+.preview-card h2,
+.preview-card h3,
+.stat-card h1,
+.stat-card h2,
+.stat-card h3,
+.model-card h1,
+.model-card h2,
+.model-card h3 {
+    color: var(--text-primary) !important;
+}
+
+
+/* Card paragraphs */
+
+.stage-card p,
+.preview-card p,
+.stat-card p,
+.model-card p,
+.metric-card p,
+.insight-card p,
+.tuning-card p {
+    color: var(--text-secondary) !important;
+}
+
+
+/* =========================================================
+   STREAMLIT CLEANUP
+   ========================================================= */
+
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header[data-testid="stHeader"] {
+    background: transparent;
+}
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.app-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 6px 0;
+}
+
+
+.brand-mark {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--accent),
+            #7777e8
+        );
+
+    color: white;
+
+    font-weight: 800;
+    font-size: 15px;
+
+    box-shadow:
+        0 7px 18px rgba(91, 91, 214, 0.25);
+}
+
+
+.brand-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.brand-title {
+    color: var(--text-primary);
+
+    font-size: 18px;
+    font-weight: 750;
+    line-height: 1.2;
+}
+
+
+.brand-subtitle {
+    color: var(--text-secondary);
+
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+
+.appearance-label {
+    color: var(--text-muted);
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+    margin-bottom: 4px;
+}
+
+
+.header-divider {
+    height: 1px;
+
+    background: var(--border);
+
+    margin-top: 18px;
+    margin-bottom: 22px;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.stButton > button {
+
+    border: 1px solid var(--border) !important;
+
+    background: var(--bg-secondary) !important;
+
+    color: var(--text-secondary) !important;
+
+    border-radius: 11px !important;
+
+    min-height: 42px !important;
+
+    font-size: 13px !important;
+
+    font-weight: 600 !important;
+
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease,
+        box-shadow 0.18s ease !important;
+
+    box-shadow: var(--shadow-small) !important;
+}
+
+
+.stButton > button:hover {
+
+    border-color: var(--accent) !important;
+
+    color: var(--accent) !important;
+
+    background: var(--accent-light) !important;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 15px rgba(91, 91, 214, 0.12) !important;
+}
+
+
+.stButton > button:focus {
+    box-shadow:
+        0 0 0 2px var(--accent-light) !important;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.navigation-container {
+    margin-bottom: 30px;
+}
+
+
+.navigation-hint {
+    color: var(--text-muted);
+
+    text-align: center;
+
+    font-size: 11px;
+
+    margin-top: 9px;
+}
+
+
+/* =========================================================
+   PAGE HEADING
+   ========================================================= */
+
+.page-content {
+    animation:
+        pageEnter 0.38s ease;
+}
+
+
+@keyframes pageEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.page-heading {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 17px;
+
+    margin-bottom: 25px;
+}
+
+
+.page-icon {
+
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: var(--accent-light);
+
+    color: var(--accent);
+
+    font-size: 23px;
+
+    border: 1px solid var(--border);
+}
+
+
+.page-heading-text {
+    padding-top: 1px;
+}
+
+
+.eyebrow {
+
+    color: var(--accent);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.4px;
+
+    margin-bottom: 5px;
+}
+
+
+.page-heading h1 {
+
+    color: var(--text-primary);
+
+    font-size: 29px;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.6px;
+
+    margin: 0;
+}
+
+
+.page-heading p {
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-top: 8px;
+
+    max-width: 720px;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   STAGE CARD
+   ========================================================= */
+
+.stage-card {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    border-radius: var(--radius-large);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--bg-secondary),
+            var(--bg-tertiary)
+        );
+
+    border: 1px solid var(--border);
+
+    box-shadow: var(--shadow-medium);
+
+    margin-bottom: 22px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.stage-card:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 14px 35px rgba(16, 24, 40, 0.10);
+}
+
+
+.stage-icon {
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 15px;
+
+    background: var(--accent);
+
+    color: white;
+
+    font-size: 20px;
+
+    box-shadow:
+        0 8px 20px rgba(91, 91, 214, 0.25);
+}
+
+
+.stage-label {
+
+    color: var(--accent);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+
+    margin-bottom: 4px;
+}
+
+
+.stage-content h2 {
+
+    color: var(--text-primary);
+
+    font-size: 19px;
+
+    margin: 0;
+}
+
+
+.stage-content p {
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+
+    margin-top: 6px;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   PREVIEW CARDS
+   ========================================================= */
+
+.preview-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+
+.preview-card {
+
+    position: relative;
+
+    min-height: 170px;
+
+    padding: 22px;
+
+    background: var(--bg-secondary);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-medium);
+
+    box-shadow: var(--shadow-small);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.preview-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    right: -45px;
+    bottom: -45px;
+
+    border-radius: 50%;
+
+    background: var(--accent-light);
+
+    opacity: 0.7;
+}
+
+
+.preview-card:hover {
+
+    transform: translateY(-4px);
+
+    border-color: var(--accent);
+
+    box-shadow: var(--shadow-medium);
+}
+
+
+.preview-number {
+
+    color: var(--accent);
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.preview-card h3 {
+
+    position: relative;
+
+    z-index: 1;
+
+    color: var(--text-primary);
+
+    font-size: 17px;
+
+    margin-top: 16px;
+
+    margin-bottom: 8px;
+}
+
+
+.preview-card p {
+
+    position: relative;
+
+    z-index: 1;
+
+    color: var(--text-secondary);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+
+/* =========================================================
+   STAT CARDS
+   ========================================================= */
+
+.stat-card {
+
+    background: var(--bg-secondary);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-medium);
+
+    padding: 20px;
+
+    box-shadow: var(--shadow-small);
+}
+
+
+.stat-label {
+
+    color: var(--text-secondary);
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.7px;
+}
+
+
+.stat-value {
+
+    color: var(--text-primary);
+
+    font-size: 28px;
+
+    font-weight: 750;
+
+    margin-top: 7px;
+}
+
+
+.stat-description {
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   MODEL CARDS
+   ========================================================= */
+
+.model-card {
+
+    background: var(--bg-secondary);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-medium);
+
+    padding: 22px;
+
+    box-shadow: var(--shadow-small);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.model-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: var(--shadow-medium);
+}
+
+
+.model-card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.model-name {
+
+    color: var(--text-primary);
+
+    font-size: 16px;
+
+    font-weight: 700;
+}
+
+
+.model-status {
+
+    color: var(--accent);
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+.model-prediction {
+
+    color: var(--text-primary);
+
+    font-size: 20px;
+
+    font-weight: 750;
+
+    margin-top: 22px;
+}
+
+
+.model-probability {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 18px;
+
+    padding-top: 15px;
+
+    border-top: 1px solid var(--border);
+}
+
+
+.model-probability span {
+
+    color: var(--text-secondary);
+
+    font-size: 11px;
+}
+
+
+.model-probability strong {
+
+    color: var(--accent);
+
+    font-size: 18px;
+}
+
+
+.model-threshold {
+
+    color: var(--text-muted);
+
+    font-size: 10px;
+
+    margin-top: 9px;
+}
+
+
+.model-metric {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 15px;
+
+    padding: 10px 12px;
+
+    border-radius: 9px;
+
+    background: var(--bg-tertiary);
+
+    color: var(--text-secondary);
+
+    font-size: 11px;
+}
+
+
+.model-metric strong {
+
+    color: var(--text-primary);
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer-divider {
+
+    height: 1px;
+
+    background: var(--border);
+
+    margin-top: 55px;
+
+    margin-bottom: 17px;
+}
+
+
+.app-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    color: var(--text-muted);
+
+    font-size: 10px;
+
+    padding-bottom: 10px;
+}
+
+
+.footer-left strong {
+
+    color: var(--text-secondary);
+}
+
+
+.footer-right {
+    text-align: right;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+    .preview-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .page-heading h1 {
+
+        font-size: 24px;
+
+    }
+
+    .stage-card {
+
+        align-items: flex-start;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .block-container {
+
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+    }
+
+    .page-heading {
+
+        gap: 12px;
+
+    }
+
+    .page-icon {
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 19px;
+
+    }
+
+    .app-footer {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 7px;
+
+    }
+
+}
+
+
+/* =========================================================
+   THEME-AWARE STREAMLIT TEXT
+   ========================================================= */
+
+/* Regular paragraphs and lists */
+[data-testid="stMarkdownContainer"] > p,
+[data-testid="stMarkdownContainer"] > ul > li,
+[data-testid="stMarkdownContainer"] > ol > li,
+[data-testid="stWidgetLabel"] p {
+    color: var(--text-color, var(--text-primary)) !important;
+}
+
+/* Captions should remain secondary, but readable */
+[data-testid="stCaptionContainer"],
+[data-testid="stCaptionContainer"] p {
+    color: var(--text-secondary) !important;
+}
+
+/* Standard Streamlit tables */
+[data-testid="stTable"] th,
+[data-testid="stTable"] td {
+    color: var(--text-color, var(--text-primary)) !important;
+}

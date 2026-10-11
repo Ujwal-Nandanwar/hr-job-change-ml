@@ -1,0 +1,6 @@
+{
+    "model__C": 1,
+    "model__class_weight": null,
+    "model__penalty": "l1",
+    "model__solver": "liblinear"
+}
